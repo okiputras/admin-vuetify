@@ -33,7 +33,7 @@
             </v-layout>
           </v-container>
           <!-- ======================================================= FORM  =========================================== -->
-          <v-layout justify-center>
+          <!-- <v-layout justify-center>
             <v-flex xs12 sm10 md10 lg10>
               <v-card ref="form" class="pb-2">
                 <v-card-text>
@@ -103,7 +103,7 @@
                 </v-card-actions>
               </v-card>
             </v-flex>
-          </v-layout>
+          </v-layout> -->
         </v-card>
       </v-tab-item>
       <!-- ========================================================================================================== -->

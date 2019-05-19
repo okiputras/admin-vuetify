@@ -17,6 +17,24 @@ export default {
   components: {
     subcard,
     tabs
+  },
+  head() {
+    return {
+      title: 'sayang  ',
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'List_order_tab',
+          name: 'description',
+          content: 'Order Seller gudang ada'
+        },
+        {
+          hid: 'Order_seller_keywords',
+          name: 'keywords',
+          content: 'order, seller, gudangada'
+        }
+      ]
+    }
   }
 }
 </script>
