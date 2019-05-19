@@ -1,9 +1,12 @@
-import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
-import pkg from './package'
+const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
+const pkg = require('./package')
+require('dotenv').config()
 
-export default {
-  mode: 'universal',
-
+module.exports = {
+  mode: 'spa',
+  env: {
+    serpul_app_title: process.env.SERPUL_APP_TITLE
+  },
   /*
    ** Headers of the page
    */
@@ -27,7 +30,11 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  oading: {
+    color: 'aqua',
+    failedColor: 'red',
+    height: '4px'
+  },
 
   /*
    ** Global CSS
@@ -45,7 +52,9 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/dotenv',
+    '@nuxtjs/robots'
   ],
   /*
    ** Axios module configuration
@@ -53,7 +62,10 @@ export default {
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
   },
-
+  robots: {
+    UserAgent: '*',
+    Disallow: ''
+  },
   /*
    ** Build configuration
    */

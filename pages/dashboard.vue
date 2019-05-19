@@ -20,21 +20,24 @@ export default {
   },
   head() {
     return {
-      title: 'sayang  ',
+      title: process.env.SERPUL_APP_TITLE,
       meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
-          hid: 'List_order_tab',
+          hid: 'dashboard_serpul',
           name: 'description',
-          content: 'Order Seller gudang ada'
+          content: 'dashboard server pulsa'
         },
         {
-          hid: 'Order_seller_keywords',
+          hid: 'server_pulsa_keywords',
           name: 'keywords',
-          content: 'order, seller, gudangada'
+          content: 'server_pulsa,pulsa,pulsa_murah'
         }
       ]
     }
+  },
+  data() {
+    return {}
   }
 }
 </script>
