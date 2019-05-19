@@ -44,7 +44,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['@/plugins/vuetify'],
+  plugins: ['@/plugins/vuetify', '@/plugins/axios'],
 
   /*
    ** Nuxt.js modules
@@ -61,6 +61,10 @@ module.exports = {
    */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+    baseURL: process.env.SERPUL_API_URL,
+    retry: { retries: 3 },
+    proxyHeaders: false,
+    credentials: false
   },
   robots: {
     UserAgent: '*',
