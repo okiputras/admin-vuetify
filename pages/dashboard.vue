@@ -14,6 +14,7 @@
 import subcard from '~/components/dashboard_subcard.vue'
 import tabs from '~/components/dashboard_tabs.vue'
 export default {
+  layout: 'dashboard',
   components: {
     subcard,
     tabs
@@ -38,6 +39,11 @@ export default {
   },
   data() {
     return {}
+  },
+  async asyncData({ $axios }) {
+    const ip = await $axios.$get('/')
+    // console.warn(ip)
+    return { ip }
   }
 }
 </script>
