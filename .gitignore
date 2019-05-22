@@ -56,6 +56,12 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
 # dotenv environment variables file
 .env
 
