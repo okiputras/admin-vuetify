@@ -128,6 +128,7 @@
       <v-tab-item>
         <v-card flat>
           <v-card-text>4</v-card-text>
+          <v-btn flat large color="error">Error</v-btn>
         </v-card>
       </v-tab-item>
     </v-tabs>
